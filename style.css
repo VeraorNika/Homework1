@@ -1,0 +1,226 @@
+html {
+    background-image: url(b.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    /*Для центрирования*/
+    width: 75%;
+    position: relative;
+    min-height: 100%;
+    //
+}
+
+header {
+    position: relative;
+    /*Для того, чтобы прижать цитату к низу*/
+    height: 100px;
+    padding: 4px;
+}
+
+header,
+footer {
+    color: #faf5eb;
+    background-color: #bd9951;
+}
+
+.header__beginning {
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+    margin: 0;
+}
+
+.header__hr-line {
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #333;
+}
+
+.header__quote {
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    /*прижать к низу цитату*/
+    bottom: 0;
+    /*прижать к низу цитату*/
+    right: 0;
+    /*прижать к правому боку цитату*/
+}
+
+.wrapper-flex{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.header__quote {
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    /*прижать к низу цитату*/
+    bottom: 0;
+    /*прижать к низу цитату*/
+    right: 0;
+    /*прижать к правому боку цитату*/
+}
+input[type=text] {
+    height:100%;
+    width: 20%;
+    align-self: center;
+    /* устанавливаем ширину элемента input  с указанным атрибутом и значением (type="text") */
+    transition: width 500ms ease-in-out;
+    /* Для свойства width мы устанавливаем длительность эффекта перехода равную 500 ms, при этом эффект перехода начинается с медленного старта и заканчивается медленно (ease-in-out) */
+}
+
+input[type=text]:focus {
+    width: 40%;
+    /* устанавливаем ширину элемента input  с указанным атрибутом и значением (type="text") при получении фокуса */
+}
+.menu {
+    height: 70px;
+    background-color: #694c12;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.menu__item {
+    width: 20%;
+    margin: 0px 5px;
+    height: 80%;
+    list-style-type: none;
+    border: 1px solid bisque;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: inherit;
+}
+
+.menu__item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #faf5eb;
+    line-height: 50px;
+    /*Возможно, текст полетит из-за этого. Сделано, чтобы отцентрировать по вертикали*/
+}
+
+.menu__item a:hover {
+    color: bisque;
+    transform: scale(1.1, 1.15);
+}
+
+.menu__item a:active {
+    color: #faf5eb;
+}
+
+
+/*Ссылка, из которой выпадает меню*/
+
+.dropdown {
+    position: relative;
+    /*чтобы работало Position:absolute Для блока с ссылками*/
+}
+
+
+/*Блок, содержащий список ссылок*/
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: 100%;
+}
+
+
+/* Ссылки внутри выпадающего списка */
+
+.dropdown-content a {
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.dropdown:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-color: rgba(1, 1, 1, 0);
+}
+
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+
+.dropdown-content a:hover {
+    background-color: inherit;
+}
+
+
+/* Показать выпадающее меню при наведении курсора */
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    flex-direction: column;
+    background-color: inherit;
+    outline border-right: inherit;
+    border-bottom: 1px solid bisque;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.galery {}
+
+.main-information {
+    display: flex;
+    height: 800px;
+    background-color: #f7f1b5;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-bottom:10px;
+}
+
+.main-information__greeting {
+    width: 60%;
+    font-size: 28px;
+    text-align: justify;
+    border-right: none;
+}
+
+.main-information__personal-information {
+    width: 35%;
+    border-left: none;
+}
+
+.main-information__personal-information-photo {
+    display: block;
+    margin: auto;
+    border-radius: 2%;
+}
+.main-information__greeting::first-letter{
+    color:red;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 28px;
+    line-height: 60px;
+    text-align:center;
+}
